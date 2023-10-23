@@ -1,0 +1,62 @@
+/* EXERCICIO 1
+
+GET /bank/_search
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "lastname": "Ratliff"
+          }
+        },
+        {
+          "match": {
+            "firstname": "Elinir"
+          }
+        }
+        ]
+    }
+  }
+  }*/
+  /*
+  EXERCICIO 2
+  
+  GET /bank/_search
+  {
+    "query":{
+      "match": {
+        "state": "PA"
+      }
+    }
+  }
+*/
+/*
+EXERCICIO 3:
+
+GET /bank/_search
+{
+"query": {
+  "bool": {
+    "must": [
+        { "match": {"state": "OK"} },
+        { "match": {"employer": "Pyrami"}}
+      ]
+  }
+}
+}
+*/
+/*
+// EXERCICIO 4
+GET /bank/_search
+{
+"query": {
+  "bool": {
+    "must": [
+        { "match": {"state": "OK"} },
+        { "match": {"gender":"F"}}
+      ]
+  }
+}
+}
+*/
